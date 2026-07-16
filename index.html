@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ave Maria Structures | Structural Engineering &amp; Building Materials</title>
+  <meta name="description"
+    content="Structural design, site construction and project management, plus direct supply of cement, iron rods and tipper sand. One engineer, one call.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { DEFAULT: '#1E293B', deep: '#0F172A', light: '#334155' },
+            amber: { DEFAULT: '#F59E0B', deep: '#B45309', light: '#FCD34D' },
+            paper: '#F8FAFC',
+            steel: '#94A3B8',
+            forest: { DEFAULT: '#166534', deep: '#14532D' }
+          },
+          fontFamily: {
+            display: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-paper text-charcoal font-body antialiased">
+
+  <!-- ============ NAVIGATION ============ -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-[72px]">
+
+        <a href="#top" class="flex items-center gap-3 shrink-0">
+          <span
+            class="grid place-items-center w-10 h-10 bg-amber text-charcoal-deep font-mono font-bold text-sm">OS</span>
+          <span class="font-display font-bold text-lg tracking-tight nav-brand-text">Ave Maria Structures</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-9 font-medium text-sm nav-link-text">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#materials" class="nav-link">Materials Store</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button id="get-quote-btn"
+            class="hidden sm:inline-flex items-center gap-2 bg-amber hover:bg-amber-deep text-charcoal-deep font-display font-bold text-sm px-5 py-2.5 transition-colors">
+            Get Quote
+          </button>
+          <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 grid place-items-center" aria-label="Toggle menu"
+            aria-expanded="false">
+            <svg id="icon-burger" class="w-6 h-6 nav-link-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 nav-link-text hidden" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="lg:hidden hidden bg-charcoal-deep border-t border-white/10">
+      <div class="px-5 py-4 flex flex-col gap-1 font-medium text-sm">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#materials" class="mobile-nav-link">Materials Store</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <button id="get-quote-btn-mobile"
+          class="mt-3 bg-amber text-charcoal-deep font-display font-bold text-sm px-5 py-3 text-center">Get
+          Quote</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative bg-charcoal-deep text-paper overflow-hidden blueprint-grid">
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep via-charcoal-deep/95 to-charcoal-deep/70"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-40 pb-24 lg:pt-48 lg:pb-32">
+        <div class="max-w-3xl">
+          <p class="font-mono text-amber text-xs tracking-[0.2em] uppercase mb-5 flex items-center gap-2">
+            <span class="w-6 h-px bg-amber"></span> COREN Registered Structural Engineer
+          </p>
+          <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
+        
+            <span class="text-amber">Everything your site needs.</span>
+          </h1>
+          <p class="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
+            We design and supervise structural builds, then supply the cement, iron rods and tipper sand to run them,
+            at the price and speed a real site needs.
+          </p>
+
+          <div class="mt-9 flex flex-col sm:flex-row gap-4">
+            <a href="#materials"
+              class="inline-flex justify-center items-center gap-2 bg-amber hover:bg-amber-deep text-charcoal-deep font-display font-bold px-7 py-4 transition-colors">
+              Explore Materials
+            </a>
+            <a href="#contact"
+              class="inline-flex justify-center items-center gap-2 border border-white/25 hover:border-amber hover:text-amber px-7 py-4 font-display font-bold transition-colors">
+              Request Construction Quote
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- spec strip -->
+      <div class="relative border-t border-white/10 bg-charcoal-deep/60 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 grid grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-sm">
+          <div><span class="text-amber block text-2xl font-semibold">12+</span><span class="text-slate-400">Years on
+              site</span></div>
+          <div><span class="text-amber block text-2xl font-semibold">180</span><span class="text-slate-400">Projects
+              delivered</span></div>
+          <div><span class="text-amber block text-2xl font-semibold">24T</span><span class="text-slate-400">Tipper fleet
+              capacity</span></div>
+          <div><span class="text-amber block text-2xl font-semibold">48hr</span><span class="text-slate-400">Avg.
+              delivery window</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="max-w-2xl mb-16">
+          <p class="font-mono text-amber-deep text-xs tracking-[0.2em] uppercase mb-3">Engineering &amp; Construction
+          </p>
+          <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight">Built on the drawing board first</h2>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Every solid structure starts before the first block is laid. We handle the planning, the site work,
+            and the coordination in between.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8" id="services-grid">
+          <!-- Service Card 1 -->
+          <article class="spec-card bg-white p-8 flex flex-col">
+            <div class="w-12 h-12 grid place-items-center bg-charcoal-deep text-amber mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                  d="M9 21V9a2 2 0 012-2h2a2 2 0 012 2v12M3 21h18M4 21V8l8-5 8 5v13" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl mb-3">House Design &amp; Planning</h3>
+            <p class="text-slate-600 leading-relaxed mb-6 grow">
+              Architectural drawings and structural calculations, so what gets built is exactly what was approved.
+            </p>
+            <ul class="font-mono text-xs text-slate-500 space-y-2">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Architectural drawings</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Structural analysis</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Building approval support</li>
+            </ul>
+          </article>
+
+          <!-- Service Card 2 -->
+          <article class="spec-card bg-white p-8 flex flex-col">
+            <div class="w-12 h-12 grid place-items-center bg-charcoal-deep text-amber mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                  d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl mb-3">Site Construction</h3>
+            <p class="text-slate-600 leading-relaxed mb-6 grow">
+              Full supervision from foundation to roofing, with skilled labour and checks at every stage.
+            </p>
+            <ul class="font-mono text-xs text-slate-500 space-y-2">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Foundation to finishing</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Skilled labour supervision</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Quality control checks</li>
+            </ul>
+          </article>
+
+          <!-- Service Card 3 -->
+          <article class="spec-card bg-white p-8 flex flex-col">
+            <div class="w-12 h-12 grid place-items-center bg-charcoal-deep text-amber mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl mb-3">Project Management</h3>
+            <p class="text-slate-600 leading-relaxed mb-6 grow">
+              One point of contact for budget, timeline and materials, so your project keeps moving.
+            </p>
+            <ul class="font-mono text-xs text-slate-500 space-y-2">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Budget &amp; timeline tracking
+              </li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Material procurement</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-amber"></span>Site progress reports</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS PORTFOLIO ============ -->
+    <section id="projects" class="py-24 lg:py-32 bg-paper">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="max-w-2xl mb-12">
+          <p class="font-mono text-amber-deep text-xs tracking-[0.2em] uppercase mb-3">Project Portfolio</p>
+          <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight">Buildings on the ground, not just on
+            paper</h2>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            A look at recent work across residential, commercial and renovation projects. Tap any photo for a closer
+            look.
+          </p>
+        </div>
+
+        <div class="flex gap-1 border-b border-slate-200 mb-10 overflow-x-auto" role="tablist">
+          <button class="project-tab active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+          <button class="project-tab" data-filter="residential" role="tab" aria-selected="false">Residential</button>
+          <button class="project-tab" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+          <button class="project-tab" data-filter="renovation" role="tab" aria-selected="false">Renovation</button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="projects-grid"></div>
+
+      </div>
+    </section>
+
+    <!-- ============ MATERIALS CATALOG ============ -->
+    <section id="materials" class="py-24 lg:py-32 bg-charcoal-deep text-paper relative overflow-hidden">
+      <div class="absolute inset-0 blueprint-grid opacity-40"></div>
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="max-w-2xl mb-12">
+          <p class="font-mono text-amber text-xs tracking-[0.2em] uppercase mb-3">Materials Store</p>
+          <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight">Order what the site needs, today</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">
+            Live prices on cement, iron rods and tipper sand. Build your order below, then send it straight
+            to our team on WhatsApp.
+          </p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex gap-1 border-b border-white/10 mb-10 overflow-x-auto" id="catalog-tabs" role="tablist">
+          <button class="catalog-tab active" data-tab="cement" role="tab" aria-selected="true">01 / Cement</button>
+          <button class="catalog-tab" data-tab="rods" role="tab" aria-selected="false">02 / Iron Rods</button>
+          <button class="catalog-tab" data-tab="sand" role="tab" aria-selected="false">03 / Tipper Sand</button>
+        </div>
+
+        <!-- Cement Panel -->
+        <div class="catalog-panel" id="panel-cement">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="cement-grid"></div>
+        </div>
+
+        <!-- Iron Rods Panel -->
+        <div class="catalog-panel hidden" id="panel-rods">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="rods-grid"></div>
+        </div>
+
+        <!-- Sand Panel -->
+        <div class="catalog-panel hidden" id="panel-sand">
+          <div class="bg-charcoal border border-white/10 p-6 lg:p-8">
+            <p class="font-mono text-xs uppercase tracking-widest text-amber mb-6">Sand &amp; Tipper Calculator</p>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div>
+                <label class="block font-medium text-sm mb-3">Sand type</label>
+                <div class="grid grid-cols-3 gap-2" id="sand-type-selector"></div>
+
+                <label class="block font-medium text-sm mb-3 mt-7">Tipper trip size</label>
+                <div class="grid grid-cols-2 gap-2" id="sand-trip-selector"></div>
+              </div>
+
+              <div class="bg-charcoal-deep border border-white/10 p-6 flex flex-col justify-between">
+                <div>
+                  <p class="font-mono text-xs uppercase tracking-widest text-slate-400 mb-4">Estimated cost</p>
+                  <dl class="space-y-2 font-mono text-sm text-slate-300">
+                    <div class="flex justify-between">
+                      <dt>Sand type</dt>
+                      <dd id="sand-est-type">&mdash;</dd>
+                    </div>
+                    <div class="flex justify-between">
+                      <dt>Trip size</dt>
+                      <dd id="sand-est-trip">&mdash;</dd>
+                    </div>
+                    <div class="flex justify-between">
+                      <dt>Delivery fee</dt>
+                      <dd id="sand-est-delivery">&mdash;</dd>
+                    </div>
+                  </dl>
+                  <div class="h-px bg-white/10 my-5"></div>
+                  <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs uppercase tracking-widest text-slate-400">Total</span>
+                    <span class="font-mono text-2xl font-semibold text-amber" id="sand-est-total">&#8358;0</span>
+                  </div>
+                </div>
+                <button id="sand-add-btn"
+                  class="mt-8 bg-amber hover:bg-amber-deep text-charcoal-deep font-display font-bold py-3.5 transition-colors">
+                  Add Sand Trip to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ORDER BAR (appears when cart has items) ============ -->
+    <div id="order-bar"
+      class="hidden fixed bottom-0 left-0 right-0 z-30 bg-charcoal text-paper border-t border-amber/40">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+        <div class="font-mono text-sm">
+          <span id="order-bar-count" class="text-amber font-semibold">0 items</span>
+          <span class="hidden sm:inline text-slate-400"> in your order &middot; est. </span>
+          <span id="order-bar-total" class="hidden sm:inline text-slate-200">&#8358;0</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="order-bar-clear"
+            class="text-xs font-mono text-slate-400 hover:text-amber underline underline-offset-2">Clear</button>
+          <button id="order-bar-send"
+            class="bg-amber hover:bg-amber-deep text-charcoal-deep font-display font-bold text-sm px-5 py-2.5 transition-colors">
+            Send Order on WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT / LOGISTICS ============ -->
+    <section id="about" class="py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+
+        <div class="relative">
+          <div class="spec-card overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop"
+              alt="Engr. Femi Okonkwo on site in a hard hat, reviewing building plans"
+              class="w-full h-[420px] object-cover">
+          </div>
+          <div class="hidden sm:block absolute -bottom-10 -left-6 w-40 border-4 border-paper shadow-lg">
+            <img src="https://images.unsplash.com/photo-1780389098001-e641e50aeebd?q=80&w=600&auto=format&fit=crop"
+              alt="Heavy machinery and truck working on an active site" class="w-full h-28 object-cover">
+          </div>
+          <div class="hidden sm:block absolute -bottom-8 -right-6 bg-amber text-charcoal-deep p-6 w-48 font-mono">
+            <span class="block text-3xl font-bold">6</span>
+            <span class="text-xs uppercase tracking-widest">Tippers in active fleet</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-mono text-amber-deep text-xs tracking-[0.2em] uppercase mb-3">About the engineer</p>
+          <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mb-6">Engr. Hillary Ali</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Hillary has spent over a decade on residential and light commercial sites across the state, from first
+            drawing to final coat of paint. He is COREN registered and holds a B.Eng in Civil Engineering.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            The materials store grew out of a simple problem: too many good builds were delayed by late or
+            short-loaded deliveries. Now the same team that designs your structure also delivers the sand
+            for it, on schedule.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 font-mono text-sm border-t border-slate-200 pt-6">
+            <div>
+              <span class="block text-slate-400 uppercase text-xs tracking-widest mb-1">Registration</span>
+              <span class="font-medium">COREN 21-2008</span>
+            </div>
+            <div>
+              <span class="block text-slate-400 uppercase text-xs tracking-widest mb-1">Delivery radius</span>
+              <span class="font-medium">40km from base yard</span>
+            </div>
+            <div>
+              <span class="block text-slate-400 uppercase text-xs tracking-widest mb-1">Response time</span>
+              <span class="font-medium">Under 2 hours</span>
+            </div>
+            <div>
+              <span class="block text-slate-400 uppercase text-xs tracking-widest mb-1">Materials sourced</span>
+              <span class="font-medium">Direct from mills &amp; quarries</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / CTA ============ -->
+    <section id="contact" class="py-20 lg:py-28 bg-amber">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div>
+          <h2 class="font-display font-bold text-2xl lg:text-3xl text-charcoal-deep tracking-tight">
+            Ready to start building?
+          </h2>
+          <p class="text-charcoal-deep/80 mt-2">Talk to us on WhatsApp, or call the yard directly.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+          <a href="tel:+2348012345678"
+            class="inline-flex justify-center items-center bg-charcoal-deep text-paper font-display font-bold px-7 py-4 hover:bg-charcoal transition-colors">
+            Call 0801 234 5678
+          </a>
+          <button id="get-quote-btn-cta"
+            class="inline-flex justify-center items-center bg-white text-charcoal-deep font-display font-bold px-7 py-4 hover:bg-white/90 transition-colors">
+            Chat With Us
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-charcoal-deep text-slate-400">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span
+            class="grid place-items-center w-9 h-9 bg-amber text-charcoal-deep font-mono font-bold text-sm">OS</span>
+          <span class="font-display font-bold text-paper">Okonkwo Structures</span>
+        </div>
+        <p class="text-sm leading-relaxed">Structural engineering and building materials, supplied by the same team.</p>
+      </div>
+      <div>
+        <h4 class="font-display font-semibold text-paper text-sm mb-4 uppercase tracking-wide">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-amber">House Design &amp; Planning</a></li>
+          <li><a href="#services" class="hover:text-amber">Site Construction</a></li>
+          <li><a href="#services" class="hover:text-amber">Project Management</a></li>
+          <li><a href="#projects" class="hover:text-amber">Project Portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display font-semibold text-paper text-sm mb-4 uppercase tracking-wide">Materials</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#materials" class="hover:text-amber">Cement</a></li>
+          <li><a href="#materials" class="hover:text-amber">Iron Rods</a></li>
+          <li><a href="#materials" class="hover:text-amber">Tipper Sand</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display font-semibold text-paper text-sm mb-4 uppercase tracking-wide">Contact</h4>
+        <ul class="space-y-2 text-sm font-mono">
+          <li>0801 234 5678</li>
+          <li>hello@okonkwostructures.ng</li>
+          <li>Km 12, Lekki-Epe Expressway</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-xs font-mono">
+      &copy; 2026 Okonkwo Structures. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ============ PROJECT PHOTO LIGHTBOX ============ -->
+  <div id="project-lightbox" class="hidden fixed inset-0 z-50 bg-charcoal-deep/90 flex items-center justify-center p-5">
+    <button id="lightbox-close"
+      class="absolute top-5 right-5 w-11 h-11 grid place-items-center text-paper hover:text-amber transition-colors"
+      aria-label="Close photo">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="max-w-3xl w-full">
+      <img id="lightbox-image" src="" alt="" class="w-full max-h-[70vh] object-cover">
+      <div class="bg-charcoal px-5 py-4">
+        <p id="lightbox-title" class="font-display font-semibold text-paper"></p>
+        <p id="lightbox-meta" class="font-mono text-xs text-slate-400 mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ WHATSAPP CHAT WIDGET ============ -->
+  <div id="wa-widget" class="fixed bottom-5 right-5 z-50 font-body">
+
+    <!-- Idle badge -->
+    <button id="wa-badge"
+      class="relative w-16 h-16 rounded-full bg-forest hover:bg-forest-deep shadow-lg grid place-items-center transition-transform hover:scale-105"
+      aria-label="Open chat">
+      <span class="absolute -top-1 -right-1 w-4 h-4 bg-amber rounded-full wa-ping"></span>
+      <svg class="w-8 h-8 text-white" viewBox="0 0 32 32" fill="currentColor">
+        <path
+          d="M16.001 3C9.383 3 4 8.383 4 15c0 2.31.653 4.468 1.786 6.303L4 29l7.897-1.752A11.94 11.94 0 0016 27c6.617 0 12-5.383 12-12S22.618 3 16.001 3zm0 21.75c-1.945 0-3.76-.535-5.317-1.463l-.381-.226-3.94.875.85-3.847-.248-.395A9.716 9.716 0 016.25 15c0-5.376 4.375-9.75 9.751-9.75S25.75 9.624 25.75 15 21.377 24.75 16.001 24.75z" />
+        <path
+          d="M21.19 17.34c-.285-.143-1.687-.833-1.949-.928-.262-.095-.453-.143-.644.143-.19.285-.738.928-.905 1.119-.166.19-.333.214-.618.071-.285-.143-1.204-.444-2.293-1.415-.848-.756-1.42-1.69-1.587-1.976-.166-.285-.018-.44.125-.583.128-.128.285-.333.428-.5.143-.166.19-.285.285-.476.095-.19.048-.357-.024-.5-.071-.143-.643-1.55-.881-2.123-.232-.557-.468-.482-.643-.491l-.548-.01a1.05 1.05 0 00-.761.357c-.262.285-1 1.  976-1 4.822s1.024 5.59 1.167 5.976c.143.385 2.02 3.084 4.895 4.325.684.295 1.217.472 1.633.604.686.218 1.31.187 1.804.113.55-.082 1.687-.69 1.926-1.357.238-.667.238-1.238.166-1.357-.071-.119-.262-.19-.548-.333z" />
+      </svg>
+    </button>
+    <div id="wa-tooltip"
+      class="absolute bottom-[74px] right-0 bg-white text-charcoal text-sm font-medium px-4 py-2.5 rounded shadow-lg whitespace-nowrap wa-tooltip-anim">
+      Need materials or a builder? Chat with us!
+      <span class="absolute -bottom-1.5 right-6 w-3 h-3 bg-white rotate-45"></span>
+    </div>
+
+    <!-- Chat panel -->
+    <div id="wa-panel"
+      class="hidden fixed sm:absolute inset-0 sm:inset-auto sm:bottom-[84px] sm:right-0 sm:w-[380px] sm:h-[600px] sm:max-h-[85vh] bg-[#E5DDD5] flex flex-col shadow-2xl sm:rounded-lg overflow-hidden">
+
+      <!-- Header -->
+      <div class="bg-forest text-white px-4 py-3 flex items-center gap-3 shrink-0">
+        <button id="wa-close" class="sm:hidden -ml-1 p-1" aria-label="Close chat">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <div
+          class="w-10 h-10 rounded-full bg-amber text-charcoal-deep grid place-items-center font-mono font-bold shrink-0">
+          FO</div>
+        <div class="min-w-0">
+          <p class="font-semibold text-sm truncate">Okonkwo Structures</p>
+          <p class="text-xs text-white/80 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 bg-emerald-300 rounded-full"></span> Online now
+          </p>
+        </div>
+        <button id="wa-close-desktop" class="hidden sm:block ml-auto p-1 hover:opacity-80" aria-label="Close chat">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Messages -->
+      <div id="wa-messages" class="flex-1 overflow-y-auto px-3 py-4 space-y-2 wa-bg"></div>
+
+      <!-- Dynamic input zone -->
+      <div id="wa-input-zone" class="shrink-0 bg-[#F0F0F0] border-t border-black/5 p-3"></div>
+
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
