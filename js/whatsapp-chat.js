@@ -186,7 +186,7 @@ async function startWelcomeFlow() {
   resetState();
 
   await appendBotMessage(
-    "Hello! I am Femi's digital assistant. How can we help you build today?",
+    "Hello! I am Hillary's digital assistant. How can we help you build today?",
     [
       { label: "Order Cement / Rods", action: () => startCementFlow() },
       { label: "Book Sand (Tipper Delivery)", action: () => startSandFlow() },
@@ -198,7 +198,7 @@ async function startWelcomeFlow() {
 async function startCementFlow(prefillMaterials) {
   await appendBotMessage("Great! What is your delivery location?");
   showTextInput({
-    placeholder: "e.g. Lekki Phase 1, Lagos",
+    placeholder: "e.g. Nkwo, Umachi",
     onSubmit: async (value) => {
       state.location = value;
       appendUserMessage(value);
@@ -209,7 +209,7 @@ async function startCementFlow(prefillMaterials) {
         onSubmit: async (materials) => {
           state.materials = materials;
           appendUserMessage(materials);
-          await appendBotMessage("Perfect, I have everything I need. Tap below to send this to Femi.");
+          await appendBotMessage("Perfect, I have everything I need. Tap below to send this to Hillary.");
           showGenerateButton("cement");
         }
       });
@@ -230,7 +230,7 @@ async function startSandFlow() {
         onSubmit: async (value) => {
           state.location = value;
           appendUserMessage(value);
-          await appendBotMessage("Perfect, I have everything I need. Tap below to send this to Femi.");
+          await appendBotMessage("Perfect, I have everything I need. Tap below to send this to Hillary.");
           showGenerateButton("sand");
         }
       });
@@ -257,7 +257,7 @@ async function startConsultationFlow() {
             onSubmit: async (location) => {
               state.location = location;
               appendUserMessage(location);
-              await appendBotMessage("Perfect, I have everything I need. Tap below to send this to Femi.");
+              await appendBotMessage("Perfect, I have everything I need. Tap below to send this to Hillary.");
               showGenerateButton("consultation");
             }
           });

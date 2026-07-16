@@ -3,10 +3,10 @@
 
 export const PROJECTS = [
   {
-    id: "ilupeju-duplex",
-    title: "Ilupeju Family Duplex",
+    id: "Udemba-duplex",
+    title: "Udemba Family Duplex",
     category: "residential",
-    location: "Ilupeju, Lagos",
+    location: "Holy Ghost, Enugu",
     year: 2025,
     status: "Completed",
     image: "https://images.unsplash.com/photo-1666004095305-300183c896ed?q=80&w=1200&auto=format&fit=crop",
@@ -14,15 +14,15 @@ export const PROJECTS = [
     description: "A 4-bedroom duplex delivered from foundation to finishing in fourteen months."
   },
   {
-    id: "chevron-office",
-    title: "Chevron Drive Office Suites",
+    id: "De Don's Mall",
+    title: "De Don's SuperStore",
     category: "commercial",
-    location: "Lekki, Lagos",
+    location: "Nsukka, Nigeria",
     year: 2024,
     status: "Completed",
     image: "https://images.unsplash.com/photo-1745015446589-7ee6f702d8c1?q=80&w=1200&auto=format&fit=crop",
-    alt: "Modern glass-fronted office building facade",
-    description: "A three-floor office complex built to full commercial code, on schedule."
+    alt: "Modern glass-fronted super store building facade",
+    description: "A Super Store built to full commercial code, for consumers"
   },
   {
     id: "origho-renovation",
